@@ -1,0 +1,133 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Qloud - Cloud Computing, Apps & Server Responsive HTML5 Template</title>
+    <!-- Favicon -->
+    {% comment %} <link rel="shortcut icon" href="{% static 'web/images/favicon.ico' %}" /> {% endcomment %}
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'web/css/bootstrap.min.css' %}">
+    <!-- REVOLUTION STYLE SHEETS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'web/revslider/css/rs6.css' %}">
+    <!-- Typography CSS -->
+    <link rel="stylesheet" href="{% static 'web/css/typography.css' %}">
+    <!-- Style CSS -->
+    <link rel='stylesheet' href="{% static 'web/css/qloud-style.css' %}" />
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{% static 'web/css/responsive.css' %}">
+
+    <link rel="stylesheet" href="{% static 'web/css/custom.css' %}">
+</head>
+
+<body>
+    <!-- loading -->
+    <div id="loading">
+        <div id="loading-center">
+            <div class="load-img">
+                <img src="{% static 'web/images/loader.gif' %}" alt="loader">
+            </div>
+        </div>
+    </div>
+    <!-- loading End -->
+   {% comment %} {% include "web/partials/header.html" %} {% endcomment %}
+{% block content %}
+
+{% endblock  %}
+
+{% include "web/partials/footer.html" %}
+
+    <!-- Footer End -->
+    <!-- back-to-top -->
+    <div id="back-to-top">
+        <a class="top" id="top" href="#top"> <i class="ion-ios-arrow-up"></i> </a>
+    </div>
+    <!-- back-to-top End -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{% static 'web/js/jquery-3.4.1.js' %}"></script>
+    <!-- jQuery  for scroll me js -->
+    <script src="{% static 'web/js/jquery-min.js' %}"></script>
+    <!-- popper  -->
+    <script src="{% static 'web/js/popper.min.js' %}"></script>
+    <!--  bootstrap -->
+    <script src="{% static 'web/js/bootstrap.min.js' %}"></script>
+    <!-- Appear JavaScript -->
+    <script src="{% static 'web/js/appear.js' %}"></script>
+    <!-- Jquery-migrate JavaScript -->
+    <script src="{% static 'web/js/jquery-migrate.min.js' %}"></script>
+    <!-- Scripts JavaScript -->
+    <script src="{% static 'web/js/scripts.js' %}"></script>
+    <!-- countdownTimer JavaScript -->
+    <script src="{% static 'web/js/jQuery.countdownTimer.min.js' %}"></script>
+    <!-- Tox-progress JavaScript -->
+    <script src="{% static 'web/js/tox-progress.min.js' %}"></script>
+    <!-- Timeline JavaScript -->
+    <script src="{% static 'web/js/timeline.js' %}"></script>
+    <!-- Timeline min JavaScript -->
+    <script src="{% static 'web/js/timeline.min.js' %}"></script>
+    <!-- Slick JavaScript -->
+    <script src="{% static 'web/js/slick.min.js' %}"></script>
+    <!-- Popper JavaScript -->
+    <script src="{% static 'web/js/popper.min.js' %}"></script>
+    <!-- Owl.carousel JavaScript -->
+    <script src="{% static 'web/js/owl.carousel.min.js' %}"></script>
+    <!-- Countdown JavaScript -->
+    <script src="{% static 'web/js/countdown.js' %}"></script>
+    <!-- Jquery.countTo JavaScript -->
+    <script src="{% static 'web/js/jquery.countTo.js' %}"></script>
+    <!-- Magnific-popup JavaScript -->
+    <script src="{% static 'web/js/jquery.magnific-popup.min.js' %}"></script>
+    <!-- Isotope.pkgd.min JavaScript -->
+    <script src="{% static 'web/js/isotope.pkgd.min.js' %}"></script>
+    <!-- Wow JavaScript -->
+    <script src="{% static 'web/js/wow.min.js' %}"></script>
+    <!--  Custom JavaScript -->
+    <script src="{% static 'web/js/custom.js' %}"></script>
+
+    <script src="{% static 'web/js/ajax.js' %}"></script>
+
+    <script src="{% static 'web/js/sweetalert2.all.min.js' %}"></script>
+    <!-- REVOLUTION JS FILES -->
+    <script src="{% static 'web/revslider/js/revolution.tools.min.js' %}"></script>
+    <script src="{% static 'web/revslider/js/rs6.min.js' %}"></script>
+    <script>
+        var revapi2,
+            tpj;
+        jQuery(function() {
+            tpj = jQuery;
+            if (tpj("#rev_slider_2_1").revolution == undefined) {
+                revslider_showDoubleJqueryError("#rev_slider_2_1");
+            } else {
+                revapi2 = tpj("#rev_slider_2_1").show().revolution({
+                    jsFileLocation: "js/",
+                    sliderLayout: "fullwidth",
+                    visibilityLevels: "1240,1024,778,480",
+                    gridwidth: "1440,1024,778,480",
+                    gridheight: "789,600,700,650",
+                    spinner: "spinner0",
+                    editorheight: "789,600,700,650",
+                    responsiveLevels: "1240,1024,778,480",
+                    disableProgressBar: "on",
+                    navigation: {
+                        onHoverStop: false
+                    },
+                    parallax: {
+                        levels: [5, 10, 15, 20, 25, 30, 35, 40, 45, 46, 47, 48, 49, 50, 51, 30],
+                        type: "mouse",
+                        origo: "slidercenter",
+                        speed: 0
+                    },
+                    fallbacks: {
+                        allowHTML5AutoPlayOnAndroid: true
+                    },
+                });
+            }
+
+        });
+    </script>
+</body>
+
+</html>

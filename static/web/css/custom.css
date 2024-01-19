@@ -1,0 +1,32 @@
+header .navbar .navbar-brand img {
+    height: 74px !important;
+
+}
+footer .footer-top .widget .textwidget img {
+    width: 186px !important;
+    height: 74px !important;
+}
+.iq-blog-box .service-title h5 {
+    font-size: 20px !important;
+}
+
+.wpcf7-form input[type=text], input[type=email],  input[type=password], input[type=tel], textarea {
+    width: 100%;
+    background: white !important;
+    float: left;
+    padding: 0 15px;
+    height: 51px;
+    line-height: 48px;
+    border: 1px solid #eeeeee;
+    color: #59597e;
+    transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
