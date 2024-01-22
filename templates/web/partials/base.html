@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Qloud - Cloud Computing, Apps & Server Responsive HTML5 Template</title>
     <!-- Favicon -->
-    {% comment %} <link rel="shortcut icon" href="{% static 'web/images/favicon.ico' %}" /> {% endcomment %}
+    <link rel="shortcut icon" href="{% static 'web/images/favicon.ico' %}" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{% static 'web/css/bootstrap.min.css' %}">
     <!-- REVOLUTION STYLE SHEETS -->
@@ -33,12 +33,11 @@
         </div>
     </div>
     <!-- loading End -->
-   {% comment %} {% include "web/partials/header.html" %} {% endcomment %}
-{% block content %}
+    {% block content %}
 
-{% endblock  %}
+    {% endblock %}
 
-{% include "web/partials/footer.html" %}
+    {% include "web/partials/footer.html" %}
 
     <!-- Footer End -->
     <!-- back-to-top -->
@@ -96,7 +95,7 @@
     <script>
         var revapi2,
             tpj;
-        jQuery(function() {
+        jQuery(function () {
             tpj = jQuery;
             if (tpj("#rev_slider_2_1").revolution == undefined) {
                 revslider_showDoubleJqueryError("#rev_slider_2_1");

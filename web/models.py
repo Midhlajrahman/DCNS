@@ -1,12 +1,11 @@
-from django.db import models
-from django.contrib.auth.models import User 
+from ckeditor.fields import RichTextField
+from django.contrib.auth.models import User
 from django.db import models
 from django.urls import reverse
-from django.utils import timezone
 from django.utils.text import slugify
-from ckeditor.fields import RichTextField
 
 # Create your models here.
+
 
 class Service(models.Model):
     title = models.CharField(max_length=500)
@@ -29,12 +28,11 @@ class Service(models.Model):
         return self.title
 
 
-
 class Updates(models.Model):
     title = models.CharField(max_length=255)
     slug = models.SlugField(unique=True)
     description = RichTextField(blank=True, null=True)
-    image = models.ImageField(upload_to='web/images/update/')
+    image = models.ImageField(upload_to="web/images/update/")
     pub_date = models.DateField(auto_now_add=True)
     author = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
     category = models.CharField(max_length=100, blank=True, null=True)
@@ -53,7 +51,7 @@ class Updates(models.Model):
     def save(self, *args, **kwargs):
         # Auto set author if not provided
         if not self.author_id:
-            self.author = User.objects.first() 
+            self.author = User.objects.first()
         # Auto generate slug if not provided
         if not self.slug:
             self.slug = slugify(self.title)
@@ -64,7 +62,7 @@ class Updates(models.Model):
 
     def get_absolute_url(self):
         return reverse("web:update_details", kwargs={"slug": self.slug})
-    
+
     def _str_(self):
         return self.title
 
@@ -85,17 +83,18 @@ class Contact(models.Model):
 
     def full_name(self):
         return f"{self.first_name} {self.last_name}"
-    
+
+
 class Faq(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
 
     def _str_(self):
         return self.title
-    
+
 
 class Enquiryform(models.Model):
-    service = models.CharField(max_length=100,editable=True)
+    service = models.CharField(max_length=100, editable=True)
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     email = models.EmailField()
@@ -109,17 +108,17 @@ class Enquiryform(models.Model):
 class Client(models.Model):
     title = models.CharField(max_length=100)
     slug = models.SlugField(unique=True)
-    image = models.ImageField(upload_to='web/images/client/')
+    image = models.ImageField(upload_to="web/images/client/")
 
     def __str__(self):
         return self.title
-    
+
 
 class Testimonial(models.Model):
     content = models.TextField()
     author_name = models.CharField(max_length=100)
     author_position = models.CharField(max_length=100)
-    avatar_image = models.ImageField(upload_to='web/images/testimonial/')
+    avatar_image = models.ImageField(upload_to="web/images/testimonial/")
 
     def __str__(self):
-        return f'Testimonial from {self.author_name}'
+        return f"Testimonial from {self.author_name}"

@@ -1,10 +1,10 @@
 header .navbar .navbar-brand img {
-    height: 74px !important;
+    height: 94px !important;
 
 }
 footer .footer-top .widget .textwidget img {
-    width: 186px !important;
-    height: 74px !important;
+    width: 249px !important;
+    height: 100px !important;
 }
 .iq-blog-box .service-title h5 {
     font-size: 20px !important;
@@ -30,3 +30,10 @@ footer .footer-top .widget .textwidget img {
     border-radius: 6px;
 }
 
+.iq-breadcrumb-one {
+    display: block;
+    padding: 40px 0 13px !important;
+    z-index: 9;
+    position: relative;
+    background: #0d1e67;
+}
