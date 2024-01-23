@@ -388,6 +388,18 @@
         }
     },
     {
+        "model": "web.enquiryform",
+        "pk": 3,
+        "fields": {
+            "service": "Network Website Content Entering and Supplying",
+            "first_name": "Nicholas",
+            "last_name": "Marshall",
+            "email": "hagirukar@mailinator.com",
+            "phone": "+1 (435) 146-5202",
+            "message": "Sequi non et hic in"
+        }
+    },
+    {
         "model": "web.client",
         "pk": 1,
         "fields": {
